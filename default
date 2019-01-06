@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+    ServerName localhost
+    ProxyPreserveHost On
+    ProxyPass /hello http://localhost:8080/hello-world
+    ProxyPassReverse /hello http://localhost:8080/hello-world
+</VirtualHost>
