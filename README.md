@@ -1,7 +1,7 @@
 # vagrantxdocker
 This project contains:
 - a Vagrantfile that creates a Ubuntu-based Docker image 
-- an Apache default file containing reverse proxy configuration (referenced in the Vagrant file)
+- an Apache default file containing reverse proxy configuration
 - a Dockerfile containing installation & deployment of a Java application with Apache in front of it
 
 Prerequisites:
