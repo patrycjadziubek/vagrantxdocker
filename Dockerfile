@@ -20,4 +20,5 @@ RUN git clone https://github.com/patrycjadziubek/vagrantxdocker.git
 CMD ["cp /app/vagrantxdocker/default /etc/apache2/sites-available/ ; service apache2 reload"]
 WORKDIR /app/hello-dropwizard
 CMD ["mvn package"]
-CMD ["java -jar target/hello-dropwizard-1.0-SNAPSHOT.jar server example.yaml >/dev/null 2>&1 &"]
+ENTRYPOINT ["sh", "-c"]
+CMD ["service apache2 restart ; java -jar target/hello-dropwizard-1.0-SNAPSHOT.jar server example.yaml >/dev/null 2>&1 &"]
