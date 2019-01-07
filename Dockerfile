@@ -21,4 +21,4 @@ CMD ["cp /app/vagrantxdocker/default /etc/apache2/sites-available/ ; service apa
 WORKDIR /app/hello-dropwizard
 CMD ["mvn package"]
 ENTRYPOINT ["sh", "-c"]
-CMD ["service apache2 restart ; java -jar target/hello-dropwizard-1.0-SNAPSHOT.jar server example.yaml >/dev/null 2>&1 &"]
+CMD ["java -jar target/hello-dropwizard-1.0-SNAPSHOT.jar server example.yaml >/dev/null 2>&1 &"]
