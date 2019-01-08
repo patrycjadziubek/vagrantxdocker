@@ -8,7 +8,7 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'docker' do |docker|
     docker.vm.network :forwarded_port, guest: 8080, host: 8080
-    docker.vm.network :forwarded_port, guest: 80, host: 8080
+    docker.vm.network :forwarded_port, guest: 80, host: 80
 
     docker.vm.provider :virtualbox do |vb|
       vb.name = 'dropwizard-docker'
